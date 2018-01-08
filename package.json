@@ -1,0 +1,37 @@
+{
+    "name": "simple-alignment",
+    "displayName": "Simple Alignment",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "earshinov",
+    "repository": "github:earshinov/vscode-simple-alignment",
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.10.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:simple-alignment.align"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "simple-alignment.align",
+                "title": "Align"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "typescript": "^2.0.3",
+        "vscode": "^1.0.0",
+        "@types/node": "^6.0.40"
+    }
+}
