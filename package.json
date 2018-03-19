@@ -3,7 +3,7 @@
     "displayName": "Simple Alignment",
     "description": "Align multiple selections into columns",
     "icon": "doc/logo.png",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "publisher": "earshinov",
     "repository": "https://github.com/earshinov/vscode-simple-alignment",
     "license": "MIT",
