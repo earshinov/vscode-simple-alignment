@@ -1,4 +1,4 @@
-# Simple alignment
+# Simple Alignment
 
 This extension allows you to align multiple selections into columns.  It is strongly inspired by the [Alignment][SublimeAlignment] extension for Sublime Text.
 
