@@ -32,8 +32,9 @@
     },
     "devDependencies": {
         "@types/node": "^6.0.40",
+        "ovsx": "^0.1.0-next.a9154dc",
         "typescript": "^2.0.3",
-        "vsce": "^1.66.0",
-        "vscode": "^1.0.0"
+        "vsce": "^1.87.0",
+        "vscode": "^1.1.37"
     }
 }
