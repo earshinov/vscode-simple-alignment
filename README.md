@@ -8,7 +8,11 @@ The functionality is available via the Command Palette (Ctrl+Shift+P > "Align") 
 
 ![Demo](doc/demo.gif)
 
+You can find this extension both in the [Visual Studio Marketplace][] and in the [Open VSX Registry][].
+
 [SublimeAlignment]: https://packagecontrol.io/packages/Alignment
 
 [Alignment]: https://marketplace.visualstudio.com/items?itemName=annsk.alignment
 [Better Align]: https://marketplace.visualstudio.com/items?itemName=wwm.better-align
+[Visual Studio Marketplace]: https://marketplace.visualstudio.com/
+[Open VSX Registry]: https://open-vsx.org/
