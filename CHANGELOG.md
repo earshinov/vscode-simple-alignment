@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Features:
 
-  - Update the README with a link to Basic Editing docs for newcomers ([#3](https://github.com/earshinov/vscode-simple-alignment/issues/3))
+- Update the README with a link to Basic Editing docs for newcomers ([#3](https://github.com/earshinov/vscode-simple-alignment/issues/3))
 
 ## [1.0.0] - 2019-09-01
 

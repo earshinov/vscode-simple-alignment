@@ -1,40 +1,53 @@
 {
-    "name": "simple-alignment",
-    "displayName": "Simple Alignment",
-    "description": "Align multiple selections into columns",
-    "icon": "doc/logo.png",
-    "version": "1.0.1",
-    "publisher": "earshinov",
-    "repository": "https://github.com/earshinov/vscode-simple-alignment",
-    "license": "MIT",
-    "engines": {
-        "vscode": "^1.10.0"
-    },
-    "categories": [
-        "Other"
-    ],
-    "activationEvents": [
-        "onCommand:simple-alignment.align"
-    ],
-    "main": "./out/extension",
-    "contributes": {
-        "commands": [
-            {
-                "command": "simple-alignment.align",
-                "title": "Align"
-            }
-        ]
-    },
-    "scripts": {
-        "vscode:prepublish": "tsc -p ./",
-        "compile": "tsc -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install"
-    },
-    "devDependencies": {
-        "@types/node": "^6.0.40",
-        "ovsx": "^0.1.0-next.a9154dc",
-        "typescript": "^2.0.3",
-        "vsce": "^1.87.0",
-        "vscode": "^1.1.37"
-    }
+  "name": "simple-alignment",
+  "displayName": "Simple Alignment",
+  "description": "Align multiple selections into columns",
+  "icon": "doc/logo.png",
+  "version": "1.0.1",
+  "publisher": "earshinov",
+  "repository": "https://github.com/earshinov/vscode-simple-alignment",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.10.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:simple-alignment.align"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "simple-alignment.align",
+        "title": "Align"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "prettier --check . && eslint src/**/*.ts",
+    "compile": "tsc -p ./",
+    "vscode:prepublish": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.40",
+    "@types/vscode": "^1.10.0",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsdoc": "^35.4.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "ovsx": "^0.1.0-next.a9154dc",
+    "prettier": "^2.8.1",
+    "typescript": "^3.7.2",
+    "vsce": "^1.87.0"
+  },
+  "prettier": {
+    "printWidth": 160,
+    "singleQuote": true,
+    "trailingComma": "none"
+  }
 }
