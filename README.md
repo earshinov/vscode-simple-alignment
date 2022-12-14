@@ -1,5 +1,8 @@
 # Simple Alignment
 
+[![Build Status](https://travis-ci.com/earshinov/vscode-simple-alignment.svg?branch=master)](https://app.travis-ci.com/github/earshinov/vscode-simple-alignment)
+[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/earshinov.simple-alignment)](https://marketplace.visualstudio.com/items?itemName=earshinov.simple-alignment)
+
 This extension allows you to align multiple selections into columns. It is strongly inspired by the [Alignment][sublimealignment] extension for Sublime Text.
 
 Unlike other extensions for VS Code like [Alignment][] and [Better Align][], this one does not decide for you what and how to align, and lets you have everything under control.
