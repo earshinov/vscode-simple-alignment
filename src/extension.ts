@@ -17,24 +17,23 @@ function run(editor: vscode.TextEditor, edit: vscode.TextEditorEdit) {
   const selections = editor.selections;
   if (selections.length < 2) return;
 
-  const uniqueLines: vscode.Position[] = [];
+  const uniqueLines = new Map<number, vscode.Position>();
+  let maxCol = 0;
+  let minCol = Infinity;
   selections.forEach((selection) => {
     const pos = selection.start;
-    const index = uniqueLines.findIndex((position) => position.line === pos.line);
-    if (index < 0) uniqueLines.push(pos);
-    else if (uniqueLines[index].character > pos.character) uniqueLines[index] = pos;
+    const existing = uniqueLines.get(pos.line);
+    if (!existing || pos.character < existing.character) uniqueLines.set(pos.line, pos);
+    maxCol = Math.max(maxCol, pos.character);
+    minCol = Math.min(minCol, pos.character);
   });
 
-  if (uniqueLines.length < 2) return;
+  if (uniqueLines.size < 2) return;
 
-  const maxPosition = Math.max(...uniqueLines.map((pos) => pos.character));
-  uniqueLines
+  const padding = Array(maxCol - minCol + 1).join(' ');
+  Array.from(uniqueLines.values())
     .sort((a, b) => -(a.line - b.line))
     .forEach((pos) => {
-      if (maxPosition > pos.character) edit.insert(pos, repeatString(' ', maxPosition - pos.character));
+      if (maxCol > pos.character) edit.insert(pos, padding.substring(0, maxCol - pos.character));
     });
-}
-
-function repeatString(s: string, n: number) {
-  return n <= 0 ? '' : Array(n + 1).join(s);
 }
