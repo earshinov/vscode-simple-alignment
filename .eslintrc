@@ -3,7 +3,12 @@
   "plugins": ["eslint-plugin-import", "eslint-plugin-jsdoc"],
   "overrides": [
     {
-      "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:@typescript-eslint/recommended-requiring-type-checking", "prettier"],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "prettier"
+      ],
       "files": ["*.ts"],
       "parserOptions": {
         "project": ["tsconfig.json"]
